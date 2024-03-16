@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- --------- CSS ---------- -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Mouad's Portfolio</title>
 </head>
 <body>
+    
    <div class="container">
     <!-- --------------- HEADER --------------- -->
       <nav id="header">
@@ -18,11 +20,11 @@
         <div class="nav-menu" id="myNavMenu">
             <ul class="nav_menu_list">
                 <li class="nav_list">
-                    <a href="#home" class="nav-link active-link">Home</a>
+                    <a href="#home" class="nav-link active-link">About me</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#about" class="nav-link">Skills</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
@@ -35,12 +37,8 @@
                 </li>
             </ul>
         </div>
-        <div class="nav-button">
-            <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-        </div>
+        
+       
       </nav>
 
 
@@ -56,18 +54,16 @@
                 <p>I'm <span class="typedText"></span></p>
             </div>
             <div class="featured-text-info">
-                <p>Experienced frontend developer with a passion for creating visually stunning
+                <p>Frontend developer with a passion for creating visually stunning
                    and user-friendly websites.
                 </p>
             </div>
-            <div class="featured-text-btn">
-                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
-            </div>
+            
             <div class="social_icons">
-                <div class="icon"><i class="uil uil-instagram"></i></div>
-                <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-                <div class="icon"><i class="uil uil-dribbble"></i></div>
-                <div class="icon"><i class="uil uil-github-alt"></i></div>
+                <div class="icon"><a href="https://web.facebook.com/mouad.tahiri.731/?locale=fr_FR" class="fa fa-facebook"></a></div>
+                <div class="icon"><a href="#" class="fa fa-instagram"></a></div>
+                <div class="icon"><a href="#" class="fa fa-linkedin"></a></div>
+                <div class="icon"><a href="#" class="fa fa-github"></a></div>
             </div>
           </div>
           <div class="featured-image">
@@ -80,19 +76,17 @@
        <!-- -------------- ABOUT BOX ---------------- -->
        <section class="section" id="about">
           <div class="top-header">
-            <h1>About Me</h1>
+            <h1>Skills</h1>
           </div>
           <div class="row">
             <div class="col">
                 <div class="about-info">
-                    <h3>My introduction</h3>
+                
                     <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge
                        frameworks and libraries like React.Js ,which allows me to implement interactive features.
                        Additionally, I have experirence with team work , on many projects .
                     </p>
-                    <div class="about-btn">
-                        <button class="btn">Download CV <i class="uil uil-import"></i></button>
-                    </div>
+                   
                 </div>
             </div>
             <div class="col">
@@ -137,12 +131,15 @@
           </div>
           <div class="project-container">
             <div class="project-box">
-                <a href="https://github.com/Apollox52/alx_html_css"></a>
+                <a href="https://github.com/Apollox52/alx_html_css">
+                    <img src="assets/images/téléchargement.png" alt="">
+                </a>
                 <i class="uil uil-briefcase-alt"></i>
                 <h3>Project 1</h3>
                 <label>Alx_Html_Css</label>
             </div>
             <div class="project-box">
+                <img src="assets/images/téléchargement.png" alt="">
                 <a href="https://github.com/Apollox52/alx_python"></a>
                 <i class="uil uil-users-alt"></i>
                 <h3>Project 2</h3>
@@ -150,6 +147,7 @@
             </div>
             
             <div class="project-box">
+                <img src="assets/images/téléchargement.png" alt="">
                 <i class="uil uil-award"></i>
                 <a href="https://github.com/Apollox52/alx_javascript" target="_blank">
                     <h3>Project 3</h3>
@@ -177,17 +175,21 @@
              </div>
              <div class="col">
                 <div class="form-control">
-                    <div class="form-inputs">
-                        <input type="text" class="input-field" placeholder="Name">
-                        <input type="text" class="input-field" placeholder="Email">
-                    </div>
-                    <div class="text-area">
-                        <textarea placeholder="Message"></textarea>
-                    </div>
-                    <div class="form-button">
-                        <button class="btn">Send <i class="uil uil-message"></i></button>
-                    </div>
-                </div>
+
+                    <form id="myform" method="POST" action="/submit-form">
+                        <div class="form-inputs">
+                            <input type="text" id="name" class="input-field" placeholder="Name">
+                            <input type="email" id="email" class="input-field" placeholder="Email">
+                        </div>
+                        <div class="text-area">
+                            <textarea id="message" name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-button">
+                            <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                        </div>
+                        </div>
+                </form>
+                    
              </div>
           </div>
        </section>
@@ -203,10 +205,10 @@
         <div class="middle-footer">
             <ul class="footer-menu">
                 <li class="footer_menu_list">
-                    <a href="#home">Home</a>
+                    <a href="#home">About me</a>
                 </li>
                 <li class="footer_menu_list">
-                    <a href="#about">About</a>
+                    <a href="#about">Skills</a>
                 </li>
                 <li class="footer_menu_list">
                     <a href="#projects">Projects</a>
@@ -227,6 +229,7 @@
 
     </div>
 
+    
 
 
 
@@ -237,6 +240,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- ----- MAIN JS ----- -->
-    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
