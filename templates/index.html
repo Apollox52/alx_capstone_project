@@ -3,45 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------Link social media------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- --------- CSS ---------- -->
-    <link rel="stylesheet" href="css/style.css">
+    <!------------C S S------------->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Mouad's Portfolio</title>
 </head>
-<body>
-    
+<body> 
    <div class="container">
     <!-- --------------- HEADER --------------- -->
       <nav id="header">
         <div class="nav-logo">
             <p class="nav-name">Apollo Yeager</p>
-
         </div>
         <div class="nav-menu" id="myNavMenu">
             <ul class="nav_menu_list">
                 <li class="nav_list">
-                    <a href="#home" class="nav-link active-link">About me</a>
-                    <div class="circle"></div>
+                    <a href="#home" class="nav-link ">About me</a>      
                 </li>
                 <li class="nav_list">
-                    <a href="#about" class="nav-link">Skills</a>
-                    <div class="circle"></div>
+                    <a href="#about" class="nav-link">Skills</a>                  
                 </li>
                 <li class="nav_list">
                     <a href="#projects" class="nav-link">Projects</a>
-                    <div class="circle"></div>
                 </li>
                 <li class="nav_list">
                     <a href="#contact" class="nav-link">Contact</a>
-                    <div class="circle"></div>
                 </li>
             </ul>
         </div>
-        
-       
       </nav>
-
-
     <!-- -------------- MAIN ---------------- -->
     <main class="wrapper">
        <!-- -------------- FEATURED BOX ---------------- -->
@@ -60,20 +51,19 @@
             </div>
             
             <div class="social_icons">
-                <div class="icon"><a href="https://web.facebook.com/mouad.tahiri.731/?locale=fr_FR" class="fa fa-facebook"></a></div>
-                <div class="icon"><a href="#" class="fa fa-instagram"></a></div>
-                <div class="icon"><a href="#" class="fa fa-linkedin"></a></div>
-                <div class="icon"><a href="#" class="fa fa-github"></a></div>
+                <div class="icon"><a href="https://web.facebook.com/mouad.tahiri.731/?locale=fr_FR" target="_blank" class="fa fa-facebook"></a></div>
+                <div class="icon"><a href="https://www.instagram.com/apollo_yeager/" class="fa fa-instagram" target="_blank"></a></div>
+                <div class="icon"><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" class="fa fa-linkedin"></a></div>
+                <div class="icon"><a href="https://github.com/Apollox52" target="_blank" class="fa fa-github"></a></div>
             </div>
           </div>
           <div class="featured-image">
             <div class="image">
-                <img src="assets/images/Screenshot_20230508-110453_Gallery.jpg" alt="Mouad">
+                <img src="{{ url_for('static', filename='images/Screenshot_20230508-110453_Gallery.jpg') }}" alt="Mouad">
             </div>
           </div>
-
        </section>
-       <!-- -------------- ABOUT BOX ---------------- -->
+       <!-- -------------- Skill BOX ---------------- -->
        <section class="section" id="about">
           <div class="top-header">
             <h1>Skills</h1>
@@ -81,12 +71,10 @@
           <div class="row">
             <div class="col">
                 <div class="about-info">
-                
                     <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge
                        frameworks and libraries like React.Js ,which allows me to implement interactive features.
                        Additionally, I have experirence with team work , on many projects .
                     </p>
-                   
                 </div>
             </div>
             <div class="col">
@@ -108,6 +96,7 @@
                     </div>
                     <div class="skills-list">
                         <span>PHP</span>
+                        <span>Laravel</span>
                     </div>
                 </div>
                 <div class="skills-box">
@@ -122,44 +111,33 @@
             </div>
           </div>
        </section>
-
        <!-- -------------- PROJECT BOX ---------------- -->
-
        <section class="section" id="projects">
           <div class="top-header">
               <h1>Projects</h1>
           </div>
           <div class="project-container">
             <div class="project-box">
-                <a href="https://github.com/Apollox52/alx_html_css">
-                    <img src="assets/images/téléchargement.png" alt="">
+                <a href="https://github.com/Apollox52/Alx_Python" target="_blank" class="projectslinks">
+                    <img class="projects_img" src="{{ url_for('static', filename='images/téléchargement.png') }}" alt="">
                 </a>
-                <i class="uil uil-briefcase-alt"></i>
-                <h3>Project 1</h3>
-                <label>Alx_Html_Css</label>
+                <h3>Alx_Python</h3>
             </div>
             <div class="project-box">
-                <img src="assets/images/téléchargement.png" alt="">
-                <a href="https://github.com/Apollox52/alx_python"></a>
-                <i class="uil uil-users-alt"></i>
-                <h3>Project 2</h3>
-                <label>Alx_Python</label>
+                <a href="https://github.com/Apollox52/Alx_Html_Css"  target="_blank" class="projectslinks">
+                    <img class="projects_img" src="{{ url_for('static', filename='images/html css 3.jpeg') }}" alt="">
+                </a>
+                <h3>Alx_Html_Css</h3>
             </div>
-            
             <div class="project-box">
-                <img src="assets/images/téléchargement.png" alt="">
-                <i class="uil uil-award"></i>
                 <a href="https://github.com/Apollox52/alx_javascript" target="_blank">
-                    <h3>Project 3</h3>
-                    
+                    <img class="projects_img" src="{{ url_for('static', filename='images/Javascript.png') }}" alt="">     
                 </a>
-                <label>Alx_Javascript</label>
+                <h3>Alx_Javascript</h3> 
             </div>
           </div>
        </section>
-
        <!-- -------------- CONTACT BOX ---------------- -->
-
        <section class="section" id="contact">
           <div class="top-header">
             <h1>Get in touch with ApolloY</h1>
@@ -168,35 +146,30 @@
           <div class="row">
              <div class="col">
                 <div class="contact-info">
-                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email: mr.robott52@gmail.com</p>
-                    <p><i class="uil uil-phone"></i> Tel: 06 52 04 85 78</p>
+                    <h2>Find Me </h2>
+                    <p> Email: mr.robott52@gmail.com</p>
+                    <p>Tel: 06 52 04 85 78</p>
                 </div>
              </div>
              <div class="col">
                 <div class="form-control">
-
-                    <form id="myform" method="POST" action="/submit-form">
+                    <form id="myform" method="post" action="/submit-form">
                         <div class="form-inputs">
-                            <input type="text" id="name" class="input-field" placeholder="Name">
-                            <input type="email" id="email" class="input-field" placeholder="Email">
+                            <input type="text" name="name" id="name" class="input-field" placeholder="Name">
+                            <input type="email" name="email" id="email" class="input-field" placeholder="Email">
                         </div>
                         <div class="text-area">
                             <textarea id="message" name="message" placeholder="Message"></textarea>
                         </div>
                         <div class="form-button">
-                            <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                            <button type="submit" class="btn">Send </button>
                         </div>
                         </div>
-                </form>
-                    
+                    </form>
              </div>
           </div>
        </section>
-
     </main>
-
-
     <!-- --------------- FOOTER --------------- -->
     <footer>
         <div class="top-footer">
@@ -218,28 +191,17 @@
                 </li>
             </ul>
         </div>
-        <div class="footer-social-icons">
-            <div class="icon"><i class="uil uil-instagram"></i></div>
-            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-            <div class="icon"><i class="uil uil-dribbble"></i></div>
-            <div class="icon"><i class="uil uil-github-alt"></i></div>
+        <div class="social_icons">
+            <div class="icon"><a href="https://web.facebook.com/mouad.tahiri.731/?locale=fr_FR" target="_blank" class="fa fa-facebook"></a></div>
+            <div class="icon"><a href="https://www.instagram.com/apollo_yeager/" class="fa fa-instagram" target="_blank"></a></div>
+            <div class="icon"><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" class="fa fa-linkedin"></a></div>
+            <div class="icon"><a href="https://github.com/Apollox52" target="_blank" class="fa fa-github"></a></div>
         </div>
-    
     </footer>
-
     </div>
-
-    
-
-
-
     <!-- ----- TYPING JS Link ----- -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-       <!-- ----- SCROLL REVEAL JS Link----- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
     <!-- ----- MAIN JS ----- -->
-    <script src="js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
